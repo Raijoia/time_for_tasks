@@ -1,11 +1,12 @@
 import React from "react";
 import style from './Botao.module.scss'
 
-class Botao extends React.Component {
+// colocando prop no modo de class, ja colocando o type da props
+class Botao extends React.Component<{ children: string }> {
   render() {
     return (
       <button className={style.botao}>
-        Botão
+        {this.props.children}
       </button>
     )
   }
