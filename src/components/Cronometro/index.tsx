@@ -4,7 +4,6 @@ import Relogio from './Relogio'
 import style from './Cronometro.module.scss'
 import { tempoParaSegundos } from '../../common/utils/time'
 import { ITarefa } from '../../types/tarefa'
-import { setTimeout } from 'timers/promises'
 
 interface Props {
   selecionado: ITarefa | undefined
@@ -23,7 +22,7 @@ export default function Cronometro({ selecionado }: Props) {
   // tipando o contador e falando que se caso for undefined, valor dele será 0
   function regressiva(contador: number = 0) {
     // setando um tempo para a função ser iniciada
-    window.setTimeout(() => {
+    setTimeout(() => {
       // fazendo um loop
       if(contador > 0) {
         setTempo(contador - 1);
