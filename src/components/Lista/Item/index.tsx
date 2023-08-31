@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../Lista.module.scss'
+import style from './Item.module.scss'
 import { ITarefa } from '../../../types/tarefa'
 
 // extended tarefa
